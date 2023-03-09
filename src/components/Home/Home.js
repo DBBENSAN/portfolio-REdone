@@ -18,7 +18,9 @@ export default function Home() {
                <p>See my work,</p><p id="f-words">follow my journey</p>
             </div>
          </article>
+
          <Carousel />
+
       </div>
    )
 }
