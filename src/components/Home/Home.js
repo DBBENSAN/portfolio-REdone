@@ -6,13 +6,13 @@ export default function Home() {
       <div class="hero">
          <article>
             <div class="sentence">
-               <p>Hi--</p><p><span id="f-name">I'm Dan</span>iele Bensan</p>
+               <p>Nice to meet you -</p><p><span id="f-name">I'm Dan</span></p>
             </div>
             <div class="sentence">
-               <p id="f-title">Full Stack Developer</p>
+               <p id="f-title">Asipiring Web Developer</p>
             </div>
             <div class="sentence">
-               <p>Aspiring Photographer</p>
+               <p>Part Time Photographer</p>
             </div>
             <div class="sentence">
                <p>See my work,</p><p id="f-words">follow my journey</p>
