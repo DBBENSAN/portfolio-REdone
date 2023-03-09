@@ -1,50 +1,32 @@
-import React, { useState } from 'react';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer";
+import Resume from "./components/Resume/Resume";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import Navigation from './components/Nav';
-import Footer from './components/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Projects from './Pages/Projects';
-import Resume from './Pages/Resume';
-
-export default function App() {
-   const [currPage, setPage] = useState('Home');
-
-   const renderPage = () => {
-      if (currPage === 'Home') {
-         return <Home />;
-      }
-      if (currPage === 'About Me') {
-         return <About />;
-      }
-      if (currPage === 'Contact') {
-         return <Contact />;
-      }
-      if (currPage === 'Projects') {
-         return <Projects />;
-      }
-      if (currPage === 'Resume') {
-         return <Resume />;
-      }
-   }
-
-   const pageChange = (x) => {
-      setPage(x)
-   }
-
-   return (
-      <div>
-         <Header />
-         <Navigation currPage={currPage} pageChange={pageChange} />
-         <h2>{currPage}</h2>
-         {renderPage()}
-         <Footer />
+function App() {
+  return (
+    <Router>
+      <div >
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
       </div>
-   );
-
+    </Router>
+  );
 }
 
+export default App;
