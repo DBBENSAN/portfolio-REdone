@@ -1,0 +1,26 @@
+article {
+   color:antiquewhite;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ 
+ .intro,
+ .job,
+ .hobby,
+ .cta {
+   flex: 1;
+   text-align: center;
+   margin: 10px;
+ }
+ 
+ .name {
+   font-weight: bold;
+   font-size: 1.2em;
+   color: #2c3e50;
+ }
+ 
+ .highlight {
+   font-weight: bold;
+   color: #e67e22;
+ }

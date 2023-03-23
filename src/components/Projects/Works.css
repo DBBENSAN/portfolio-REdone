@@ -1,0 +1,42 @@
+.card-container {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.card {
+   width: 100%;
+   max-width: 50%;
+   margin: 1rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.card img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.card-content {
+   padding: 1rem;
+}
+
+.card-content h2 {
+   margin-top: 0;
+}
+
+.card-content p {
+   margin-bottom: 1rem;
+}
+
+.card-content a {
+   display: block;
+   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+   .card {
+      max-width: 100%;
+   }
+}

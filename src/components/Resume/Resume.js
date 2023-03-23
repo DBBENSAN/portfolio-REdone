@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+
+import Skills from "./Skills"
+import './Resume.css'
 
 export default function Resume() {
   const handleDownload = () => {
@@ -9,8 +11,9 @@ export default function Resume() {
 
   return (
     <Container>
-      <Row className="justify-content-center">
-        <Button onClick={handleDownload}>Download Resume</Button>
+      <Skills />
+      <Row className="fiddy">
+        <button onClick={handleDownload}>Download Resume</button>
       </Row>
     </Container>
   );

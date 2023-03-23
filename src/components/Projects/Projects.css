@@ -1,0 +1,21 @@
+.projects-container {
+   background-color: #f0f0f0;
+}
+
+.projects-header {
+   background-color: #333;
+   padding: 20px;
+}
+
+.projects-header-text {
+   color: white;
+   font-size: 36px;
+   text-align: center;
+   text-shadow: 2px 2px black;
+}
+
+
+.active {
+   background-color: gray;
+   color: white;
+}

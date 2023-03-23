@@ -1,48 +1,47 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
+import "./Projects.css"
 import Viewport from "./Viewport";
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState("onTheWeb");
+  const [activeTab, setActiveTab] = useState("works");
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
   return (
-    <Container>
-      <h2>Check out my latest works</h2>
+    <div className="projects-container">
+      <div className="projects-header">
+        <h2 className="projects-header-text">Check out some of my work!</h2>
+      </div>
       <Row className="mt-4">
-        <Col>
-          <div className="d-flex justify-content-center mb-4">
-            <Button
-              className="mr-2"
-              variant={activeTab === "onTheWeb" ? "primary" : "secondary"}
-              onClick={() => handleTabChange("onTheWeb")}
-            >
-              On the Web
-            </Button>
-            <Button
-              className="mr-2"
-              variant={activeTab === "behindTheLens" ? "primary" : "secondary"}
-              onClick={() => handleTabChange("behindTheLens")}
-            >
-              Behind the Lens
-            </Button>
-            <Button
-              variant={activeTab === "readSomeBlogs" ? "primary" : "secondary"}
-              onClick={() => handleTabChange("readSomeBlogs")}
-            >
-              Read Some Blogs
-            </Button>
-          </div>
-        </Col>
+        <div className="d-flex justify-content-center mb-4">
+          <Button
+            onClick={() => handleTabChange("photos")}
+            className={activeTab === "photos" ? "active" : ""}
+          >
+            Photos
+          </Button>
+          <Button
+            onClick={() => handleTabChange("works")}
+            className={activeTab === "works" ? "active" : ""}
+          >
+            Projects
+          </Button>
+          <Button
+            onClick={() => handleTabChange("blogs")}
+            className={activeTab === "blogs" ? "active" : ""}
+          >
+            Blogs
+          </Button>
+        </div>
       </Row>
       <Row>
         <Col>
           <Viewport activeTab={activeTab} />
         </Col>
       </Row>
-    </Container>
-  );
+    </div>
+  )
 }

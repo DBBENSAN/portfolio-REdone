@@ -1,0 +1,8 @@
+body {
+  padding-bottom: 10vh;
+  /* Make sure this matches the height of the footer */
+  background: linear-gradient(to bottom left, #4a148c, #00bfa5);
+  background-size: cover;
+  background-attachment: fixed;
+}
+

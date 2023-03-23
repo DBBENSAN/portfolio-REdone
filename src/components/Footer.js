@@ -6,34 +6,32 @@ import { FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <div>
-      <Container fluid className="footer">
+      <Container className="footer">
         <Row>
-          <Col md="4" className="footer-copywright">
-            <h3>Dan</h3>
+          <Col>
+            <p>Made by Daniele Bensan</p>
           </Col>
-          <Col md="4" className="footer-copywright">
-            <h3>Dan</h3>
+          <Col>
+            <p>With special thanks to UCB Extension</p>
           </Col>
-          <Col md="4" className="footer-body">
-            <ul className="footer-icons">
-              <li className="social-icons">
+          <Col>
+            <ul>
+              <li>
                 <a
                   href="https://github.com/DBBENSAN"
-                  style={{ color: "white" }}
+                  style={{ color: "Black" }}
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  <AiFillGithub />
+                ><AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
+              <li>
                 <a
                   href="https://www.linkedin.com/in/danielebensan/"
-                  style={{ color: "white" }}
+                  style={{ color: "Black" }}
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  <FaLinkedinIn />
+                ><FaLinkedinIn />
                 </a>
               </li>
             </ul>
